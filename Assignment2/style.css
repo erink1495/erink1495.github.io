@@ -1,4 +1,8 @@
 :root {
+  /*The colours represented Autumn, and the video was selected specifically to match this aesthetic. The link to nature, plants, trees is calming. The Autumn weather gets you ready for winter, creating a warm, cosy feeling. 
+*/
+
+
     --primary-bg-color: #461111;
     --text-color: #c07f7f;
     --main-bg-color: #040303;
@@ -14,7 +18,7 @@
     margin: 0;
     padding: 0;
   }
-  
+  /*The font from the original code was kept as it is easy to read and would be accessible to all people, including those with poor eyesight, difficulty reading or disabilities (dyslexia)*/
   body {
     font-family: "Arial", sans-serif;
     background-color: var(--primary-bg-color);
@@ -84,6 +88,8 @@
     width: 100%;
   }
   /*hover was added to increase engagement*/
+  /*The hover feature was to improve the overall look of the webpage. Buttons would be highlighted a different colour if the cursor was selected. This is to show they are interactable. */
+
   .custom-controls button:hover {
     background-color: var(--main-btn-bg-color);
     color: var(--main-text-color);

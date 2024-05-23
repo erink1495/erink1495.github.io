@@ -14,6 +14,7 @@ function togglePlayPause() {
   if (audio.paused || audio.ended) {
     audio.play();
     video.play();
+    //The loop of the video increases the chances of less distraction. Less distraction during studying is ideal.
     video.loop=true
     playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v1.png";
   } else {
@@ -24,6 +25,8 @@ function togglePlayPause() {
 }
 
 // playPauseBtn.addEventListener("click", togglePlayPause);
+//Play bar follows the music rather than the video. The bar was kept from the original code, as this is helps the user know where they are in the song, and thematically worked well with the aesthetic,
+
 function updateProgressBar() {
     const value = (audio.currentTime / audio.duration) * 100;
     progressBar.style.width = value + "%";
@@ -50,6 +53,11 @@ repeatBtn.addEventListener("click", function(){
 function loopAudio() {
     audio.loop=true
 }
+/*The volume control to help users pick the desired volume
+Volume control helps users easily adjust volume that is comfortable for their ears
+The repeat button was added so the user doesn't have to continually press the button every time they want to replay the song. The repeat button would make it convenient for the user, and would cause them less distractions while studying. 
+The volume bar also allows the user to put the audio on mute if needed to, as pulling the audio all the way back would ‘mute’ it. */
+
 const volumeSlider = document.getElementById("volume-slider");
 const volumeDisplay = document.getElementById("volume-display");
 
@@ -61,6 +69,8 @@ volumeSlider.addEventListener("input", () => {
   function updateVolumeDisplay() {
     volumeDisplay.textContent = `Volume: ${Math.floor(player.volume * 100)}%`;
   }
+  /*The skip to start button was added as this would be convenient for the user. The user could take the audio back to the beginning, instead of waiting for the audio to play all the way though. */
+
     var skipToStartBtn = document.getElementById("skip-start-btn");
     if (currentTime = 0) {
         audio.play();
