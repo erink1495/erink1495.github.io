@@ -1,0 +1,98 @@
+:root {
+    /*The colours represented the sea */
+      --nav-text-color: #E1F7F5;
+      --text-color: #0d41ab;
+      --main-text-color: #3572EF;
+      --main-btn-bg-color: #050C9C;
+      --btn-toggle-color: #0b133e;
+    }
+    body {
+    /* This is a gradient background. This was added to give a more authentic
+    ocean look.*/
+    background-image: linear-gradient(0deg, #5356FF, #67C6E3
+    );
+    }
+    /*This is the navigation button that will take you to the home page again once the
+    experience is over. This is for convieniece as the user will not have to close and reopen
+    the webpage to restart the experience or return to the home page.*/
+    nav {
+        margin-top: 20%;
+        text-align: center;
+        list-style-type: none;
+        margin: 0px;
+        padding: 1%;
+        overflow: hidden;
+        background-color: #050C9C;
+        font-size: 200%;
+      }
+      
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin-right: 20px;
+      }
+      
+      nav a {
+        text-decoration: none;
+        color: var(--nav-text-color);
+      }
+      /* hover was used again here to indicate when the users curser is hovering
+      over the navigate button */ 
+      nav:hover {
+        background-color: #0E46A3;
+      }
+   /* This is the header that tells you what the title of the experience is*/
+      header {
+        color: var(--main-text-color);
+        margin-top: 12rem;
+        text-align: center;
+        width: 100%;
+        font-size: 450%;
+    }
+
+    h2 {
+        color: var(--text-color);
+        margin: 0rem 0;
+        text-align: center;
+        width: 100%;
+        font-size: 200%;
+    }
+    /*This is the styling for the play button. It needed to match the overall
+    theme of the webpage. */
+    #Play-btn {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--main-btn-bg-color);
+    border-radius: 5px;
+    border-color: var(--main-btn-bg-color);
+    margin-top: 4%;
+    text-align: center;
+    padding: 1.7rem;  
+    font-size: 2rem;
+    }
+    /*Again, the hover action was utilised again so the user can see what they
+    are hovering over. Helps with user vuisability */
+#Play-btn:hover {
+    background-color: var(--btn-toggle-color);
+}
+    a {
+        text-decoration: none;
+        color: var(--main-text-color);
+    }
+/*This is the styling for the audio mute button. It is in the corner of the screen
+away from the main buttons. It keeps the webpage organised and aesthetically pleasing. */
+#audio-btn-mute {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--main-btn-bg-color);
+    border-color: var(--main-btn-bg-color);
+    border-radius: 3rem;
+    padding: 0.5%;
+}

@@ -1,0 +1,45 @@
+ <!-- Author: Erin Krejany
+      Date First Created: 12/06/2024
+      Last edited: 12/06/2024
+      Discription: this code is an interactive experience. The code is focused on the action of 
+      hover. The experience includes hovering over Jellyfish to see what they do. The experience allows
+      users to discover each interaction as they go. -->
+ <!-- This is the homepage of the webpage. It is included as a part of the design choice, making the webpage more
+      professional and creates a clear distinction between what is part of the experience and what isnt. -->
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Assignment 3</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+<!-- This is the nav button so users can return to the home page if necessary-->
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    <header> Jellyfish Playground </header>
+    <h2>Come And See What They Do</h2>
+      <!-- This is the play button users use to get into the interaction -->
+    <div class="Play">
+        <a href="Main Interaction.html"><button id="Play-btn">Play</button></a> 
+    </div> 
+    <!--This is the audio mute button. This will allow the user to mute or have the audio on for a more
+    immersive experience. This can also be used in the other page as well.-->
+    <div class="audio">
+        <button id="audio-btn-mute">
+            <img 
+            id="audio-img"
+            src="https://img.icons8.com/?size=100&id=reqgj3e1uKBy&format=png&color=000000"
+            alt="Audio Mute"
+            width="24"
+            height="24">
+        </button>
+    </div>
+</body>
+</html>
