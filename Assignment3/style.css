@@ -5,17 +5,20 @@
       --main-text-color: #3572EF;
       --main-btn-bg-color: #050C9C;
       --btn-toggle-color: #0b133e;
+      
     }
     body {
     /* This is a gradient background. This was added to give a more authentic
     ocean look.*/
     background-image: linear-gradient(0deg, #5356FF, #67C6E3
     );
+    
     }
     /*This is the navigation button that will take you to the home page again once the
     experience is over. This is for convieniece as the user will not have to close and reopen
     the webpage to restart the experience or return to the home page.*/
     nav {
+      
         margin-top: 20%;
         text-align: center;
         list-style-type: none;
@@ -24,6 +27,9 @@
         overflow: hidden;
         background-color: #050C9C;
         font-size: 200%;
+        font-family: "Julius Sans One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
       }
       
       nav ul {
@@ -52,14 +58,25 @@
         text-align: center;
         width: 100%;
         font-size: 450%;
+        font-family: "Julius Sans One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
     }
-
+    .julius-sans-one-regular {
+      font-family: "Julius Sans One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
     h2 {
         color: var(--text-color);
         margin: 0rem 0;
         text-align: center;
         width: 100%;
         font-size: 200%;
+        font-family: "Julius Sans One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
     }
     /*This is the styling for the play button. It needed to match the overall
     theme of the webpage. */
@@ -74,6 +91,9 @@
     text-align: center;
     padding: 1.7rem;  
     font-size: 2rem;
+    font-family: "Mansalva", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     }
     /*Again, the hover action was utilised again so the user can see what they
     are hovering over. Helps with user vuisability */
@@ -96,3 +116,117 @@ away from the main buttons. It keeps the webpage organised and aesthetically ple
     border-radius: 3rem;
     padding: 0.5%;
 }
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* The image container keeps all the images and everything attached to them in one place. It makes it easier to apply the same styling to all 
+Jellyfish if necessary*/
+.image-container {
+  position: fixed;
+  top: 20%;
+  bottom: 10%;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+}
+/* makes the transitions while randomly moving around a kit smoother.*/
+.moving-image {
+  position: absolute;
+  width: 15%; /* Make images fill the container width */
+  height: 15%; /* Make images fill the container height */
+  transition: left 7.5s ease, top 7.5s ease; /* Smooth transitions for left and top properties */
+}
+
+.moving-image:hover {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+
+#Jelly1:hover {
+  filter: hue-rotate(270deg); /* Rotate the hue by 90 degrees on hover */
+  animation:changeColor 1s linear; /* Apply the animation for 5 seconds */
+}
+
+/* This gives the Jellyfish on the home page the appearance that they are floating in water. */
+#Jellyfish-home {
+  animation-name: floating;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+#Jelly4:hover {
+  animation: grow 0.5s forwards ease-in-out; /* Apply the grow animation on hover */
+}
+
+#Jelly4:not(:hover) {
+  animation: shrink 0.5s forwards ease-in-out; /* Apply the shrink animation when not hovered */
+}
+
+/*Keyframes for the grow and shrink transition */
+@keyframes grow {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.5);
+  }
+}
+
+@keyframes shrink {
+  0% {
+      transform: scale(1.5);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* These keyframes animate the jellyfish on the home page infinitely.This makes the home page more engaging when first seeing the webpage. */
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 30px); }
+  100%   { transform: translate(0, -0px); } 
+  }
+
+  /* Define keyframes for smooth color change */
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg); /* Initial color */
+  }
+  100% {
+    filter: hue-rotate(-270deg); /* Final color */
+  }
+}
+
+/* This is the animation for the hidden text that appears on the bottom. */
+.hidden-text {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.5rem;
+  display: none; /* Hide the text by default */
+}
+
+#Jelly2:hover + #Jelly2-text,
+#Jelly3:hover + #Jelly3-text {
+    display: block; /* Show the text when Jelly2 or Jelly3 is hovered over */
+}
+
+

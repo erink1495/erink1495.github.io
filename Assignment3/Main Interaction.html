@@ -1,6 +1,6 @@
  <!-- Author: Erin Krejany
       Date First Created: 12/06/2024
-      Last edited:
+      Last edited: 13/06/2024
       Discription: this code is an interactive experience. The code is focused on the action of 
       hover. The experience includes hovering over Jellyfish to see what they do. The experience allows
       users to discover each interaction as they go. -->
@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+     <!-- These fonts I felt were very fitting for the context. Its both playful and easy to read, making it more accessible for everyone.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Mansalva&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- This is the nav button so users can return to the home page if necessary-->
@@ -24,9 +31,28 @@
         </ul>
       </nav>
       <h2>Hover Over The Jellyfish To See What They Do!</h2>
+      <!-- This is the image container that allows the images to move-->
+        <!-- The Jellyfish design was made by me in Illustrator. Illustrator allowed me to export
+         a svg file so that it would take up less storage.-->
+      <div class="image-container">
+        <img id="Jelly1" class="moving-image" src="Jellyfish.svg">
+        <img id="Jelly2" class="moving-image" src="Jellyfish.svg">
+        <img id="Jelly3" class="moving-image" src="Jellyfish.svg">
+        <img id="Jelly4" class="moving-image" src="Jellyfish.svg">
+        <img id="Jelly5" class="moving-image" src="Jellyfish.svg">
+        <img id="Jelly6" class="moving-image" src="Jellyfish.svg">
+        <img id="Jelly7" class="moving-image" src="Jellyfish.svg">
+         <!-- Hidden text for Jelly 2 and 3 -->
+         <div id="Jelly2-text" class="hidden-text">Did you know some Jellyfish can live forever?</div>
+         <div id="Jelly3-text" class="hidden-text">Jellyfish are made of 95% water!</div>
+         <audio id="jelly6-audio" src="Bubbles.wav"></audio>
+         <audio id="jelly7-audio" src="Jelly Squish.wav"></audio>
+      </div>
        <!--This is the audio mute button. This will allow the user to mute or have the audio on for a more
     immersive experience. This can also be used in the other page as well.-->
     <div class="audio">
+        <!-- This audio was mixed by me in reaper as well as the sound effects-->
+        <audio id="ambiance-audio" src="Ocean Ambience.wav"></audio>
         <button id="audio-btn-mute">
             <img 
             id="audio-img"
@@ -38,3 +64,5 @@
     </div>
 </body>
 </html>
+
+<!-- some of the jelly fish do nothing. This was a design choice as it allows for more curiosity and exploration.-->

@@ -1,6 +1,6 @@
  <!-- Author: Erin Krejany
       Date First Created: 12/06/2024
-      Last edited: 12/06/2024
+      Last edited: 13/06/2024
       Discription: this code is an interactive experience. The code is focused on the action of 
       hover. The experience includes hovering over Jellyfish to see what they do. The experience allows
       users to discover each interaction as they go. -->
@@ -15,31 +15,48 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Mansalva&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- This is the nav button so users can return to the home page if necessary-->
-    <nav>
+   <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
         </ul>
       </nav>
-    <header> Jellyfish Playground </header>
-    <h2>Come And See What They Do</h2>
+    <div class="row">
+      <div class="column">
+        <img id="Jellyfish-home" src="Jellyfish.svg">
+      </div>
+      <div class="column">
+        <header> Jellyfish Playground </header>
+        <h2>Come And See What They Do</h2>
       <!-- This is the play button users use to get into the interaction -->
-    <div class="Play">
-        <a href="Main Interaction.html"><button id="Play-btn">Play</button></a> 
-    </div> 
+        <div class="Play">
+          <a href="Main Interaction.html"><button id="Play-btn">Play</button></a> 
+        </div>
+      </div>
+      <div class="column">
+        <img id="Jellyfish-home" src="Jellyfish.svg">
+      </div>
     <!--This is the audio mute button. This will allow the user to mute or have the audio on for a more
     immersive experience. This can also be used in the other page as well.-->
-    <div class="audio">
-        <button id="audio-btn-mute">
-            <img 
-            id="audio-img"
-            src="https://img.icons8.com/?size=100&id=reqgj3e1uKBy&format=png&color=000000"
-            alt="Audio Mute"
-            width="24"
-            height="24">
+  <div class="audio">
+    <audio id="ambiance-audio" src="Ocean Ambience.wav"></audio>
+      <button id="audio-btn-mute">
+          <img 
+          id="audio-img"
+          src="https://img.icons8.com/?size=100&id=reqgj3e1uKBy&format=png&color=000000"
+          alt="Audio Mute"
+          width="24"
+          height="24">
         </button>
-    </div>
+  </div>
 </body>
 </html>
+
